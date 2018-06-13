@@ -1,0 +1,121 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="ExtendedFlowDocumentSample" Height="600" Width="800">
+    <Grid>
+        <FlowDocumentScrollViewer IsToolBarVisible="True">
+            <FlowDocument>
+                <Paragraph>
+                        <Figure Width="250" HorizontalAnchor="ContentLeft" >
+                            <BlockUIContainer >
+                                <Image Source="image/моника.jpg" Height="160" Width="120"  ></Image>
+                            </BlockUIContainer>
+                        </Figure>
+                </Paragraph>
+            
+           
+            <Paragraph FontSize="120" TextAlignment="Justify" LineHeight="1">
+                    <Span>WPF</Span>
+                </Paragraph>
+                <Paragraph>
+                    
+                </Paragraph>
+                <Paragraph>
+                    WPF,which stands for
+                    <Bold>Windows Presentation Foundation</Bold>,is Microsoft's latest approach to a GUI framework,used with the .NET framework. Some advantages include:
+                </Paragraph>
+                
+                <List>
+                    <ListItem>
+                        <Paragraph>
+                            It's newer and thereby more in tune with current standarts
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Microsoft is using it for a lot of new applications,e.g. Visual Studio
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            It's more flexible,so you can do more things without having to write or buy new controls
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Table BorderBrush="green" CellSpacing="5">
+
+                    <Table.Resources>
+                        <Style TargetType="TableCell">
+                            <Setter Property="BorderBrush" Value="LightGray" ></Setter>
+                            <Setter Property="BorderThickness" Value="0"></Setter>
+                            <Setter Property="Padding" Value="1"></Setter>
+                            <Setter Property="TextAlignment" Value="Center"></Setter>
+                        </Style>
+                    </Table.Resources>
+                    <TableRowGroup>
+                        <TableRow Background="LightGray">
+                            <TableCell >
+                                <Paragraph Background="LightGray" >
+                                    <Run></Run>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Background="LightGray" FontSize="15" FontWeight="Black">
+                                    <Run>WinForms</Run>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph Background="LightGray" FontSize="15" FontWeight="Black">
+                                    <Run>WPF</Run>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow >
+                            <TableCell >
+                                <Paragraph Background="LightGray" FontSize="15" FontWeight="Black">
+                                    <Run>Line of code</Run>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph >
+                                    <Run>1.718.000</Run>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph >
+                                    <Run>1.542.000</Run>
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow >
+                            <TableCell>
+                                <Paragraph Background="LightGray" FontSize="15" FontWeight="Black">
+                                    <Run>Developers</Run>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph >
+                                    <Run>633.000</Run>
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph >
+                                    <Run>981.000</Run>
+                                </Paragraph>
+                            </TableCell>
+
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <Paragraph FontStyle="Italic" FontSize="15" Foreground="Gray">
+                    A table of made up WinForms/WPF numbers
+                </Paragraph>
+            </FlowDocument>
+
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>
